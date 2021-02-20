@@ -3,8 +3,15 @@
   box-sizing: border-box;
 }
 
+:root {
+  --main-bg-color: #000dca;
+  --container-color: #2f68e2;
+  --container-color-rgba: rgba(0, 0, 0, 0.4);
+  --font-color: #ffffff;
+}
+
 body {
-  background-color: rgb(68, 68, 255);
+  background-color: var(--main-bg-color);
   font-family: "Roboto", sans-serif;
   display: flex;
   margin: 0;
@@ -15,8 +22,8 @@ body {
 
 .container {
   padding: 20px 40px;
-  background-color: rgba(0, 0, 0, 0.4);
-  color: white;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: var(--font-color);
   border-radius: 5px;
 }
 
@@ -34,8 +41,8 @@ body {
   border: none;
   width: 100%;
   background-color: transparent;
-  border-bottom: 2px solid white;
-  color: white;
+  border-bottom: 2px solid var(--font-color);
+  color: var(--font-color);
   font-size: 16px;
   padding: 5px 0;
   z-index: 1;
@@ -72,12 +79,18 @@ body {
 }
 
 .text a:hover {
-  color: white;
+  color: var(--font-color);
 }
 
 .input-control input,
-.btn {
+.btn,
+.text a {
   outline: none;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background-color: var(--container-color);
 }
 
 .btn:active {

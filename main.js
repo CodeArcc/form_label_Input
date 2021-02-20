@@ -1,4 +1,5 @@
 const inputFields = document.querySelectorAll(".input-control input");
+const inputLabels = document.querySelectorAll(".input-control label");
 
 inputFields.forEach((field, idx) => {
   field.addEventListener("focus", (event) => {
@@ -12,6 +13,12 @@ inputFields.forEach((field, idx) => {
     } else {
       field.parentElement.children[1].style.transform = "translateY(-50%)";
     }
+  });
+});
+
+inputLabels.forEach((label, idx) => {
+  label.addEventListener("click", () => {
+    label.parentElement.children[0].focus();
   });
 });
 
