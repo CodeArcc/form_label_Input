@@ -1,2 +1,3 @@
-# form_label_wave
-wave effect on form label
+# form_label_Input
+Simple Login form with morden design.
+Label on top of input field.
