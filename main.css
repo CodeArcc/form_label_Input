@@ -4,9 +4,10 @@
 }
 
 :root {
-  --main-bg-color: #000dca;
+  --main-bg-color: #8189ff;
   --container-color: #2f68e2;
-  --container-color-rgba: rgba(0, 0, 0, 0.4);
+  --hightligh-color: #6795f7;
+  --container-color-rgba: rgba(0, 0, 0, 0.8);
   --font-color: #ffffff;
 }
 
@@ -22,7 +23,7 @@ body {
 
 .container {
   padding: 20px 40px;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: var(--container-color-rgba);
   color: var(--font-color);
   border-radius: 5px;
 }
@@ -35,6 +36,13 @@ body {
   position: relative;
   margin: 20px 0;
   padding: 20px 0;
+}
+
+.input-control label::before {
+  content: '',
+  height: 10px;
+  width: 10px;
+  background-color: red;
 }
 
 .input-control input {
@@ -55,11 +63,13 @@ body {
   top: 50%;
   font-size: 16px;
   transform: translateY(-50%);
+  cursor: text;
   transition: 0.3s ease-in-out;
 }
 
-.input-control input:focus + label {
-  color: lightblue;
+.input-control input:focus + label,
+.input-control input:valid + label {
+  color: var(--hightligh-color);
   transform: translateY(-35px);
 }
 
@@ -72,7 +82,7 @@ body {
 }
 
 .text a {
-  color: lightblue;
+  color: var(--hightligh-color);
   text-decoration: none;
   font-weight: bold;
   cursor: pointer;
